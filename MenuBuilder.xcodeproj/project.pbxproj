@@ -10,6 +10,9 @@
 		D4702A651ED8239800CC55FD /* MenuBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4702A5B1ED8239700CC55FD /* MenuBuilder.framework */; };
 		D4702A6A1ED8239800CC55FD /* MenuBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4702A691ED8239800CC55FD /* MenuBuilderTests.swift */; };
 		D4702A6C1ED8239800CC55FD /* MenuBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D4702A5E1ED8239700CC55FD /* MenuBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4702A791ED823D400CC55FD /* Character+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4702A761ED823D400CC55FD /* Character+Utilities.swift */; };
+		D4DDFB071ED850AC0039B7F8 /* NSMenu+BuildContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DDFB061ED850AC0039B7F8 /* NSMenu+BuildContext.swift */; };
+		D4DDFB0B1ED853CE0039B7F8 /* NSMenuItem+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DDFB0A1ED853CE0039B7F8 /* NSMenuItem+Init.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		D4702A641ED8239800CC55FD /* MenuBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4702A691ED8239800CC55FD /* MenuBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBuilderTests.swift; sourceTree = "<group>"; };
 		D4702A6B1ED8239800CC55FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4702A761ED823D400CC55FD /* Character+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+Utilities.swift"; sourceTree = "<group>"; };
+		D4DDFB061ED850AC0039B7F8 /* NSMenu+BuildContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMenu+BuildContext.swift"; sourceTree = "<group>"; };
+		D4DDFB0A1ED853CE0039B7F8 /* NSMenuItem+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMenuItem+Init.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		D4702A511ED8239700CC55FD = {
 			isa = PBXGroup;
 			children = (
+				D4702A751ED823AC00CC55FD /* Sources */,
 				D4702A5D1ED8239700CC55FD /* MenuBuilder */,
 				D4702A681ED8239800CC55FD /* MenuBuilderTests */,
 				D4702A5C1ED8239700CC55FD /* Products */,
@@ -84,6 +91,16 @@
 				D4702A6B1ED8239800CC55FD /* Info.plist */,
 			);
 			path = MenuBuilderTests;
+			sourceTree = "<group>";
+		};
+		D4702A751ED823AC00CC55FD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D4702A761ED823D400CC55FD /* Character+Utilities.swift */,
+				D4DDFB0A1ED853CE0039B7F8 /* NSMenuItem+Init.swift */,
+				D4DDFB061ED850AC0039B7F8 /* NSMenu+BuildContext.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +166,7 @@
 					D4702A5A1ED8239700CC55FD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DHNJ8N28ZZ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D4702A631ED8239800CC55FD = {
@@ -198,6 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4DDFB071ED850AC0039B7F8 /* NSMenu+BuildContext.swift in Sources */,
+				D4DDFB0B1ED853CE0039B7F8 /* NSMenuItem+Init.swift in Sources */,
+				D4702A791ED823D400CC55FD /* Character+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +342,8 @@
 		D4702A701ED8239800CC55FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -335,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zetasq.MenuBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -342,6 +366,8 @@
 		D4702A711ED8239800CC55FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -363,6 +389,7 @@
 		D4702A731ED8239800CC55FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DHNJ8N28ZZ;
 				INFOPLIST_FILE = MenuBuilderTests/Info.plist;
@@ -376,6 +403,7 @@
 		D4702A741ED8239800CC55FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DHNJ8N28ZZ;
 				INFOPLIST_FILE = MenuBuilderTests/Info.plist;
@@ -405,6 +433,7 @@
 				D4702A711ED8239800CC55FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4702A721ED8239800CC55FD /* Build configuration list for PBXNativeTarget "MenuBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +442,7 @@
 				D4702A741ED8239800CC55FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
