@@ -34,7 +34,7 @@ extension NSMenu {
       let menuItem = NSMenuItem(title: title, action: nil, keyEquivalent: "")
       menu.addItem(menuItem)
       
-      let submenu = NSMenu()
+      let submenu = NSMenu(title: title)
       menuItem.submenu = submenu
       
       let subcontext = BuildContext(menu: submenu)
